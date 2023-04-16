@@ -39,7 +39,7 @@ console.log('The last animal is', animalArray[3]);
 // 3.c. (STRETCH) TODO: Log the last animal by using the array length, 
 //      instead of the exact index number of the last item
 
-console.log('The last animal is', [animalArray.length - 1]);
+console.log('The last animal is', animalArray[animalArray.length - 1]);
 
 // 4. Adding & Removing Array Items
 console.log('--- 4. Adding and removing array items ---');
@@ -90,17 +90,22 @@ console.log('Replaced second food, favorite foods are now', favFoods);
 
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
-favFoods.reverse();
+
 console.log('Sorted/reverse order of favorite foods');
-console.log(favFoods);
+favFoods.sort();
+console.log('sorted', favFoods);
+favFoods.reverse();
+console.log('reverse', favFoods);
 
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
 
-favFoods = ['chips and burger and spaghetti'];
+
 console.log('Edited array to become a string');
-console.log(favFoods);
+let newArray = ['chips and burger and spaghetti'];
+let newString = newArray.join(' and ');
+console.log(newString);
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
@@ -115,6 +120,8 @@ console.log(favThings);
 
 favThings = favFoods.concat(animalArray);
 console.log(favThings);
+
+console.log('Now I am getting the song "boots and cats" stuck in my head');
 //Found this concatenating function, it returns with combined array with proper spacing. 
 // Is it still supposed to retain the string of "ands" between the food values?
 // why did it work better in this function compared to stringing the declared variables together?
